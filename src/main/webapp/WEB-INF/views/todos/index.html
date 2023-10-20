@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todos</title>
+</head>
+<body>
+<div th:each="todo : ${todos}">
+    <p>
+        <a th:href="@{/todos/{id}(id=${todo.getId()})}" th:text="${todo.getName() + ' '  + todo.getId()}"></a>
+    </p>
+</div>
+</body>
+</html>

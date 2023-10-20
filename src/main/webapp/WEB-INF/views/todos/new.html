@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--xmlns:th="http://thymeleaf.org"-->
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Новый</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/todos}"  th:object="${todo}">
+    <label for="name">Name</label>
+<!--    <input type="text" id="name"/>-->
+    <input type="text" th:field="*{name}" id="name"/>
+    <label for="description">Description</label>
+<!--&lt;!&ndash;    <input type="text" id="description"/>&ndash;&gt;-->
+    <input type="text" th:field="*{description}" id="description"/>
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>
